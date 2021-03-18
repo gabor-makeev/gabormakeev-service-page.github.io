@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+@mixin fontDetails ($style:normal, $weight:normal, $size:16px, $height:26px, $color:#1F3F68) {
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}
+
+// header start
+
+@import "blocks/header";
+
+// header end
+
+// offers start
+
+@import "blocks/offers";
+
+// offers end
+
+// projects start
+
+@import "blocks/projects";
+
+// projects end
+
+// footer start
+
+.footer {
+    background-color: #316099;
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 91px 0 96px 0;
+
+        &-left {
+            letter-spacing: 0.05em;
+        }
+    }
+
+    &-h2 {
+        @include fontDetails(normal, normal, 36px, 46px, #FFFFFF);
+        letter-spacing: 0.05em;
+        margin-bottom: 32px;
+        width: 340.96px;
+    }
+
+    &-p {
+        @include fontDetails(normal, normal, 16px, 26px, #FFFFFF);
+        opacity: 0.6;
+        width: 494.77px;
+    }
+
+    &-button {
+        @include fontDetails(normal, normal, 16px, 26px, #FFFFFF);
+        letter-spacing: 0.04em;
+        width: 236.63px;
+        min-height: 56px;
+        background-color: #5A98D0;
+        margin-top: 165px - 91px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        outline: none;
+
+        &:hover {
+            background-color: #fff;
+            box-shadow: 0 0 3px #1F3F68;
+            color: #1F3F68;
+        }
+
+        &:active {
+            background-color: #5A98D0;
+            outline: 1px solid white;
+            color: white;
+            box-shadow: none;
+        }
+    }
+
+    &-hr {
+        border: 1px solid #FFFFFF;
+        opacity: 0.4;
+        margin-bottom: 64px;
+    }
+
+    &-ul {
+        display: flex;
+        margin: 0 0 64px 19.56px;
+    }
+
+    &-li {
+        @include fontDetails(normal, normal, 16px, 26px, #FFFFFF);
+        letter-spacing: 0.05em;
+        padding: 42.02px - 22.81px;
+        width: 358px;
+        margin-right: 32px;
+    }
+
+    &-copyright {
+        @include fontDetails(normal, normal, 16px, 26px, #FFFFFF);
+        letter-spacing: 0.05em;
+        opacity: 0.4;
+    }
+
+    &-bottom {
+        padding-bottom: 64px;
+    }
+}
+
+// footer end
